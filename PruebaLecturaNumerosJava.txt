@@ -1,0 +1,35 @@
+import java.io.IOException;
+
+public class PruebaLecturaNumeros {
+    public static void main(String[] args) {
+        try {
+            LecturaNumeros lector = new LecturaNumeros();
+            
+            System.out.println("Introduce un número entero:");
+            int entero1 = lector.readInt();
+            
+            System.out.println("Introduce otro número entero:");
+            int entero2 = lector.readInt();
+            
+            System.out.println("Introduce un número Integer:");
+            Integer integer = lector.readInteger();
+            
+            System.out.println("Introduce un número double:");
+            double decimal1 = lector.readDouble();
+            
+            System.out.println("Introduce otro número double:");
+            double decimal2 = lector.readDouble();
+            
+            System.out.println("\nLos números introducidos son:");
+            System.out.println("Entero 1: " + entero1);
+            System.out.println("Entero 2: " + entero2);
+            System.out.println("Integer: " + integer);
+            System.out.println("Double 1: " + decimal1);
+            System.out.println("Double 2: " + decimal2);
+            
+            lector.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
